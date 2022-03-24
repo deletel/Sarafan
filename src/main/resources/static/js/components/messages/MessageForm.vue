@@ -4,6 +4,7 @@
                 label="New message"
                 placeholder="Write something"
                 v-model="text"
+                @keyup.enter="save"
         />
         <v-btn @click="save">
             Save
@@ -35,6 +36,7 @@
                     id: this.id,
                     text: this.text
                 }
+
                 if (this.id) {
                     this.updateMessageAction(message)
                 } else {
