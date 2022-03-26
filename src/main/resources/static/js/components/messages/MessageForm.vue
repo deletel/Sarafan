@@ -33,7 +33,7 @@
             ...mapActions(['addMessageAction', 'updateMessageAction']),
             save() {
                 const message = {
-                    id: this.id,
+                    id: null,
                     text: this.text
                 }
 
@@ -44,7 +44,7 @@
                 }
 
                 this.text = ''
-                this.id = ''
+                this.id = null
             }
         }
     }
