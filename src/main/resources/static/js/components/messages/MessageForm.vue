@@ -20,7 +20,7 @@
         data() {
             return {
                 text: '',
-                id: ''
+                id: null
             }
         },
         watch: {
@@ -33,7 +33,7 @@
             ...mapActions(['addMessageAction', 'updateMessageAction']),
             save() {
                 const message = {
-                    id: null,
+                    id: this.id,
                     text: this.text
                 }
 
